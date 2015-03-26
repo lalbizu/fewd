@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <title>Lila Albizu</title>
+  <style>
+    body {
+      text-align: center;
+      background: url("http://upload.wikimedia.org/wikipedia/commons/f/fe/Golden_Fog,_San_Francisco.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: helvetica;
+    }
+    p {
+      font-size: 22px;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+    input[type="submit"] {
+      background: #C0362C;
+      color: white;
+    }
+    img {
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://pbs.twimg.com/profile_images/378800000462903333/e3de22e55c21fe24fb372c6ded149e54_400x400.jpeg" width=200>
+  <p>Hi! I'm Lila, a San Francisco-based digital marketer. Say hello!</p>
+  <input type="email" placeholder="Your email">
+  <input type="submit">
+</body>
