@@ -14,15 +14,17 @@
         left: -8px;
       }
       #button1 {
+        display: inline;
         position: absolute;
-        top: 12px;
+        top: 25px;
         right: 9em;
         color: white;
         text-shadow: 1px 1px black;
       }
       #button2 {
+        display:inline;
         position: absolute;
-        top: 1px;
+        top: 15px;
         right: 2em;
         color: white;
         text-shadow: 1px 1px black;
@@ -32,7 +34,10 @@
         background-color: royalblue;
         max-width: 80px;
         text-align: center;
-
+      }
+      a {
+        color: white;
+        text-decoration: none;
       }
       body {
         background: url(http://f.cl.ly/items/3G1S012t3J3l3b0h070i/background.png);
@@ -65,8 +70,12 @@
       <img src="http://f.cl.ly/items/171n1S1D1y2m3Y3v3K1N/acme-corp.jpg"
        width="200"
        alt ="ACME Corp Logo">
-      <p id="button1"><strong>Products</strong></p>
-      <p id="button2"><strong>Sign Up</strong></p>
+      <nav>
+        <ul>
+          <li id="button1"><a href="#"><strong>Products</strong></a></li>
+          <li id="button2"><a href="#"><strong>Sign Up</strong></a></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <h1>Welcome to ACME Corp!</h1>
