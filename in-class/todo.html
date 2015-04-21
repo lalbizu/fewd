@@ -1,0 +1,48 @@
+
+<p>
+  Hello world!
+</p>
+<ul>
+<li>First Item</li>
+</ul>
+    <script charset="utf-8">
+       //access the paragraph
+       var paragraph = document.querySelector("p");
+
+
+       //set the paragraph's textContent like var = something
+       paragraph.textContent = "Goodbye World!";
+
+       //Access the list
+       var list = document.querySelector("ul");
+
+       //Creat a NEW list item element
+       var newListItem = document.createElement("li");
+       newListItem.textContent = "Second item!";
+
+       //Append the new list
+       list.appendChild(newListItem);
+
+       //Create a New image
+       var image = document.createElement("img");
+       image.setAttribute("src","https://33.media.tumblr.com/5181614f1847c7d967fda23cdc5f5a1a/tumblr_nlsdejON8T1qj4315o1_500.gif");
+
+       //Apprent the new image
+       list.appendChild(image);
+
+       //create a new link
+       var newLink = document.createElement("a");
+       newLink.setAttribute("href","https://33.media.tumblr.com/5181614f1847c7d967fda23cdc5f5a1a/tumblr_nlsdejON8T1qj4315o1_500.gif");
+       newLink.setAttribute("target", "_blank")
+       newLink.setAttribute("title", "Groundbreaking")
+       newLink.textContent = "Click Here!"
+
+       //Append the new link
+       list.appendChild(newLink);
+
+       var anchorListItem = document.createElement("li");
+       anchorListItem.appendChild(newLink);
+       
+    </script>
+
+</html>

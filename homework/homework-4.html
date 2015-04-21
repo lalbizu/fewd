@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+<script charset="utf-8">
+   function longestSide(a,b) {
+     var a = parseFloat(a);
+     var b = parseFloat(b);
+     //Calculate the Pythagorean Theorem (a*a)+(b*b)=(c*c)
+     var result = Math.sqrt((a*a)+(b*b));
+     return result;
+   }
+
+   function pyTheorem() {
+     //Ask for the two sides they know
+     var a = prompt("What is a?");
+     var b = prompt("What is b?");
+     //call longestSide function
+     var c = longestSide(a,b);
+     //return answer
+     alert("The longest side is "+ c);
+   }
+</script>
+  </body>
+</html>
