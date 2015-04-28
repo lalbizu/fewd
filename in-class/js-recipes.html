@@ -1,0 +1,61 @@
+1. Add an element to the page
+  a. does an element have content?
+  b. are there any attributes that need to be set?
+  c. where does it go if it's being created?
+  d. what kind of element? (p, ul, li, etc)
+
+2. Adding behavior to an element
+  a. what element?
+  b. what function?
+
+3. Changing something about an existing element
+  a. which element?
+  b. what are you changing?
+
+4. get data from a server
+  - ajax
+
+5. given a set of things, do something to each of them
+  - loops
+
+
+<script charset="utf-8">
+
+//adding element to page
+  //1. create the elemt
+  var child = document.createElement("li");
+  //2. add it to the dom. Append Child
+  var parent = document.querySelector("ul");
+  parent.appendChild(child);
+  //3. set the content
+  child.textContent = "Do Homework, like Avand told me to";
+  //4. setting some attributes
+  child.setAttribute("class", "todo-item");
+
+  //Yields:
+  //<ul>
+  //  <li class="todo-item">Do Homework...</li>
+  //</ul>
+
+//adding behavior to an element
+  //1. what element do you want to attach behaviour to
+  var button = document.querySelector("button#click-me");
+  //2. what happens when the event occurs (event handler)?
+  function sayCursorLocation(clickEvent){
+
+  }
+  //3. Attaching the event handler to an element
+  button.addEventListener("click", sayCursorLocation);
+
+//changing something about an existing element
+  //1. get the element you want to manipulate
+  var image = document.querySelector("img#logo");
+  var paragraph = document.querySelector("p");
+  //2. change an attribute
+  image.setAttribute("src","http://example.com/images/small-logo.jpg");
+  paragraph.textContent = "new text";
+
+
+
+
+</script>
