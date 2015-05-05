@@ -30,51 +30,77 @@ var favoriteMovies = [
 //   <span>(1993, 5.0 stars, 8 ratings)</span>
 // </li>
 
+//var list = document.querySelector("#movie-list");
+
+//var listItemOne = document.createElement("li");
+//var listItemTwo = document.createElement("li");
+//var listItemThree = document.createElement("li");
+
+//var spanOne = document.createElement("span");
+//var spanTwo = document.createElement("span");
+//var spanThree = document.createElement("span");
+
+//spanOne.textContent = "(1993, 5 stars, 8 ratings)";
+//spanTwo.textContent = "(1991, 4.4 stars, 11 ratings)";
+//spanThree.textContent = "(2014, 3.7 stars, 10 ratings)";
+
+//var coolRunnings = document.createElement("a");
+//coolRunnings.setAttribute("href","http://www.imdb.com/title/tt0106611/");
+//coolRunnings.setAttribute("target", "_blank")
+//coolRunnings.setAttribute("title", "Cool Runnings")
+//coolRunnings.textContent = "Cool Runnings";
+
+//var terminatorTwo = document.createElement("a");
+//terminatorTwo.setAttribute("href","http://www.imdb.com/title/tt0103064/");
+//terminatorTwo.setAttribute("target", "_blank")
+//terminatorTwo.setAttribute("title", "Terminator 2")
+//terminatorTwo.textContent = "Terminator 2";
+
+//var interstellar = document.createElement("a");
+//interstellar.setAttribute("href","http://www.imdb.com/title/tt0103064/");
+//interstellar.setAttribute("target", "_blank")
+//interstellar.setAttribute("title", "Interstellar")
+//.textContent = "Interstellar";
+//coolRunnings.appendChild(spanOne);
+//terminatorTwo.appendChild(spanTwo);
+//interstellar.appendChild(spanThree);
+
+//listItemOne.appendChild(coolRunnings);
+//listItemTwo.appendChild(terminatorTwo);
+//listItemThree.appendChild(interstellar);
+
+//list.appendChild(listItemOne);
+//list.appendChild(listItemTwo);
+//list.appendChild(listItemThree);
+
+
+var movieItem = document.createElement("li");
 var list = document.querySelector("#movie-list");
 
-var listItemOne = document.createElement("li");
-var listItemTwo = document.createElement("li");
-var listItemThree = document.createElement("li");
+for (var i = 0;)
 
-var spanOne = document.createElement("span");
-var spanTwo = document.createElement("span");
-var spanThree = document.createElement("span");
+function createMovie(favoriteMovies) {
+  var movieLink = document.createElement("a");
+  movieLink.setAttribute("href", favoriteMovies.url);
+  movieLink.setAttribute("target", "_blank")
+  movieLink.textContent = favoriteMovies.name;
+  return movieLink;
+}
 
-spanOne.textContent = "(1993, 5 stars, 8 ratings)";
-spanTwo.textContent = "(1991, 4.4 stars, 11 ratings)";
-spanThree.textContent = "(2014, 3.7 stars, 10 ratings)";
+function getAverage() {
+  var sum = 0;
+  for (var j = 0; j <favoriteMovies.ratings.length)
+}
 
-var coolRunnings = document.createElement("a");
-coolRunnings.setAttribute("href","http://www.imdb.com/title/tt0106611/");
-coolRunnings.setAttribute("target", "_blank")
-coolRunnings.setAttribute("title", "Cool Runnings")
-coolRunnings.textContent = "Cool Runnings";
+var totalRating = 0;
 
-var terminatorTwo = document.createElement("a");
-terminatorTwo.setAttribute("href","http://www.imdb.com/title/tt0103064/");
-terminatorTwo.setAttribute("target", "_blank")
-terminatorTwo.setAttribute("title", "Terminator 2")
-terminatorTwo.textContent = "Terminator 2";
+for (var j = 0; j < favoriteMovies.ratings.length; j++) {
+  totalRating = totalRating + movie.ratings[j];
+}
 
-var interstellar = document.createElement("a");
-interstellar.setAttribute("href","http://www.imdb.com/title/tt0103064/");
-interstellar.setAttribute("target", "_blank")
-interstellar.setAttribute("title", "Interstellar")
-interstellar.textContent = "Interstellar";
+var avgRating = Math.round((totalRating / movie.ratings.length) * 10) / 10
 
-coolRunnings.appendChild(spanOne);
-terminatorTwo.appendChild(spanTwo);
-interstellar.appendChild(spanThree);
-
-listItemOne.appendChild(coolRunnings);
-listItemTwo.appendChild(terminatorTwo);
-listItemThree.appendChild(interstellar);
-
-list.appendChild(listItemOne);
-list.appendChild(listItemTwo);
-list.appendChild(listItemThree);
-
-
-
+var span = document.createElement("span");
+span.textContent = "(" + favoriteMovies.year + ", " + avgRating + " stars," + favoriteMovies.ratings.length + " ratings)";
 
 </script>

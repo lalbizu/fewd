@@ -1,0 +1,46 @@
+<script>
+var a = [509, 707, 490, 866, 826, 924, 949, 530, 915, 890, 677, 751, 227, 309, 532, 259, 982, 407, 229, 764, 925, 878, 925, 731, 898, 410, 117, 83, 306, 909, 224, 613]
+
+// What's the largest number in the array?
+var max = 0;
+for (var i = 0; i < a.length; i++) {
+  var num = a[i];
+  if (num > max ) {
+    max = num;
+  }
+}
+
+// What's the sum of all the numbers in the array?
+var sum = 0;
+for (var i = 0; i < a.length; i++) {
+  var num2 = a[i];
+  sum = sum + num2;
+}
+
+// How many numbers greater than 500?
+var count = 0;
+for (var i = 0; i < a.length; i++) {
+  if (a[i] > 500) {
+    count = count + 1;
+  }
+}
+
+// Which numbers are between 300 and 700?
+var moreLessThan = 0;
+for (var i = 0; i < a.length; i++) {
+  if (a[i] > 300 && a[i] < 700) {
+    moreLessThan = moreLessThan + 1;
+  }
+}
+
+
+// How many even numbers?
+var evens = 0;
+for (var i = 0; i < a.length; i++) {
+  if ((a[i] % 2) == 0) {
+    evens = evens + 1;
+  }
+}
+
+
+</script>

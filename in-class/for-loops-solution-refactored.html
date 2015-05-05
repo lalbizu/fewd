@@ -1,0 +1,73 @@
+
+<!-- saved from url=(0064)http://avandamiri.com/fewd-30/for-loops-solution-refactored.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function (a){var b={},c;for(c in a||
+{})if(a.hasOwnProperty(c)&&"undefined"!=typeof a[c])try{var d=[],e;for(e in d)delete d[e];b[c]=JSON.stringify(a[c],function(a,b){try{if("function"!==typeof b){if("object"===typeof b&&null!==b){if(b instanceof HTMLElement||b instanceof Node||-1!=d.indexOf(b))return;d.push(b)}return b}}catch(c){}})}catch(f){}a=document.createEvent("CustomEvent");a.initCustomEvent("RetrievedVariablesEvent",!0,!0,{variables:b});window.dispatchEvent(a)})({'studioV2': window['studioV2'],'richMediaIframeBreakoutCreatives': window['richMediaIframeBreakoutCreatives']})</script></head><body><ul>
+  <!-- Movies will go here, see below. -->
+<li><a href="http://www.imdb.com/title/tt0106611/">Cool Runnings</a><span>(1993, 5 stars, 8 ratings)</span></li><li><a href="http://www.imdb.com/title/tt0103064/">Terminator 2</a><span>(1991, 4.4 stars, 11 ratings)</span></li><li><a href="http://www.imdb.com/title/tt0816692/">Interstellar</a><span>(2014, 3.7 stars, 10 ratings)</span></li></ul>
+
+<script>
+var favoriteMovies = [
+  {
+    name: 'Cool Runnings',
+    year: 1993,
+    url: 'http://www.imdb.com/title/tt0106611/',
+    ratings: [5, 5, 5, 5, 5, 5, 5, 5]
+  },
+  {
+    name: 'Terminator 2',
+    year: 1991,
+    url: 'http://www.imdb.com/title/tt0103064/',
+    ratings: [5, 4, 3, 5, 4, 5, 4, 5, 5, 5, 3]
+  },
+  {
+    name: 'Interstellar',
+    year: 2014,
+    url: 'http://www.imdb.com/title/tt0816692/',
+    ratings: [5, 3, 5, 5, 1, 2, 4, 5, 5, 2]
+   }
+]
+
+var list = document.querySelector("ul");
+
+function getAverage(numbers) {
+  var sum = 0;
+
+  for (var j = 0; j < numbers.length; j++) {
+    sum = sum + numbers[j];
+  }
+
+  var average = Math.round((sum / numbers.length) * 10) / 10
+
+  return average;
+}
+
+function createMovie(movie) {
+  var link = document.createElement("a");
+  link.setAttribute("href", movie.url)
+  link.textContent = movie.name;
+
+  var avgRating = getAverage(movie.ratings);
+
+  var span = document.createElement("span");
+  span.textContent = "(" + movie.year + ", " + avgRating + " stars, " + movie.ratings.length + " ratings)";
+
+  var movieItem = document.createElement("li");
+  movieItem.appendChild(link);
+  movieItem.appendChild(span);
+
+  return movieItem;
+}
+
+for (var i = 0; i < favoriteMovies.length; i++) {
+  var movie = favoriteMovies[i];
+
+  var newMovie = createMovie(movie);
+
+  list.appendChild(newMovie);
+}
+</script>
+
+<style>
+span { margin-left: .25em; }
+</style>
+</body></html>
