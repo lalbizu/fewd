@@ -1,0 +1,63 @@
+
+<!-- saved from url=(0053)http://avandamiri.com/fewd-30/todo-sort-solution.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function (a){var b={},c;for(c in a||
+{})if(a.hasOwnProperty(c)&&"undefined"!=typeof a[c])try{var d=[],e;for(e in d)delete d[e];b[c]=JSON.stringify(a[c],function(a,b){try{if("function"!==typeof b){if("object"===typeof b&&null!==b){if(b instanceof HTMLElement||b instanceof Node||-1!=d.indexOf(b))return;d.push(b)}return b}}catch(c){}})}catch(f){}a=document.createEvent("CustomEvent");a.initCustomEvent("RetrievedVariablesEvent",!0,!0,{variables:b});window.dispatchEvent(a)})({'studioV2': window['studioV2'],'richMediaIframeBreakoutCreatives': window['richMediaIframeBreakoutCreatives']})</script></head><body><form id="new-todo-item-form">
+  <input type="text" id="new-todo-item-input" placeholder="What do you need to do?">
+  <button type="submit">Create todo</button>
+</form>
+
+<hr>
+
+<button id="sort-button">Sort A-Z</button>
+
+<ul id="todo-list">
+  
+  
+  
+<li>a</li><li>b</li><li>c</li></ul>
+
+<script>
+var newTodoItemForm = document.querySelector("#new-todo-item-form");
+var newTodoItemInput = document.querySelector("#new-todo-item-input");
+var todoList = document.querySelector("#todo-list");
+var sortButton = document.querySelector("#sort-button");
+
+function createTodo(text) {
+  var newListItem = document.createElement("li");
+  newListItem.textContent = text;
+  todoList.appendChild(newListItem);
+}
+
+function handleFormSubmit(formSubmitEvent) {
+  createTodo(newTodoItemInput.value);
+  formSubmitEvent.preventDefault();
+  newTodoItemForm.reset();
+}
+
+function sortList(buttonClickEvent) {
+  var listItems = document.querySelectorAll("#todo-list li");
+  var todos = [];
+
+  for (var i = 0; i < listItems.length; i++) {
+    var listItem = listItems[i];
+    todos.push(listItem.textContent);
+    todoList.removeChild(listItem);
+  }
+
+  todos.sort();
+
+  for (var i = 0; i < todos.length; i++) {
+    createTodo(todos[i]);
+  }
+}
+
+newTodoItemForm.addEventListener("submit", handleFormSubmit);
+sortButton.addEventListener("click", sortList);
+</script>
+
+<style>
+#new-todo-item-input {
+  width: 200px;
+}
+</style>
+</body></html>
