@@ -1,0 +1,80 @@
+<ul id="movie-list">
+  <!-- Movies will go here, see below. -->
+</ul>
+
+<script>
+var favoriteMovies = [
+  {
+    name: 'Cool Runnings',
+    year: 1993,
+    url: 'http://www.imdb.com/title/tt0106611/',
+    ratings: [5, 5, 5, 5, 5, 5, 5, 5]
+  },
+  {
+    name: 'Terminator 2',
+    year: 1991,
+    url: 'http://www.imdb.com/title/tt0103064/',
+    ratings: [5, 4, 3, 5, 4, 5, 4, 5, 5, 5, 3]
+  },
+  {
+    name: 'Interstellar',
+    year: 2014,
+    url: 'http://www.imdb.com/title/tt0816692/',
+    ratings: [5, 3, 5, 5, 1, 2, 4, 5, 5, 2]
+   }
+]
+
+// Create a <li> for each movie that looks like this and add it to the list:
+// <li>
+//   <a href="http://www.imdb.com/title/tt0106611/">Cool Runnings</a>
+//   <span>(1993, 5.0 stars, 8 ratings)</span>
+// </li>
+
+var list = document.querySelector("#movie-list");
+
+var listItemOne = document.createElement("li");
+var listItemTwo = document.createElement("li");
+var listItemThree = document.createElement("li");
+
+var spanOne = document.createElement("span");
+var spanTwo = document.createElement("span");
+var spanThree = document.createElement("span");
+
+spanOne.textContent = "(1993, 5 stars, 8 ratings)";
+spanTwo.textContent = "(1991, 4.4 stars, 11 ratings)";
+spanThree.textContent = "(2014, 3.7 stars, 10 ratings)";
+
+var coolRunnings = document.createElement("a");
+coolRunnings.setAttribute("href","http://www.imdb.com/title/tt0106611/");
+coolRunnings.setAttribute("target", "_blank")
+coolRunnings.setAttribute("title", "Cool Runnings")
+coolRunnings.textContent = "Cool Runnings";
+
+var terminatorTwo = document.createElement("a");
+terminatorTwo.setAttribute("href","http://www.imdb.com/title/tt0103064/");
+terminatorTwo.setAttribute("target", "_blank")
+terminatorTwo.setAttribute("title", "Terminator 2")
+terminatorTwo.textContent = "Terminator 2";
+
+var interstellar = document.createElement("a");
+interstellar.setAttribute("href","http://www.imdb.com/title/tt0103064/");
+interstellar.setAttribute("target", "_blank")
+interstellar.setAttribute("title", "Interstellar")
+interstellar.textContent = "Interstellar";
+
+coolRunnings.appendChild(spanOne);
+terminatorTwo.appendChild(spanTwo);
+interstellar.appendChild(spanThree);
+
+listItemOne.appendChild(coolRunnings);
+listItemTwo.appendChild(terminatorTwo);
+listItemThree.appendChild(interstellar);
+
+list.appendChild(listItemOne);
+list.appendChild(listItemTwo);
+list.appendChild(listItemThree);
+
+
+
+
+</script>
