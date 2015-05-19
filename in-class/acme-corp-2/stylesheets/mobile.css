@@ -1,0 +1,29 @@
+html {
+  background: red;
+}
+
+header {
+  text-align: center;
+}
+
+header nav {
+  position: static;
+  display:none;
+}
+
+header nav li {
+  display:block
+}
+
+header nav.expanded {
+  display: block;
+}
+
+main {
+  margin-top: 0;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  padding: 15px;
+  font-size: 14px;
+}
